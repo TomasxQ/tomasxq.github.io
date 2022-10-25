@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Tomas Corrales</title>
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+       emailjs.init("NhqzhholjV78iLxsf");
+      })();
+    </script>
+  </head>
+  <body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+      <nav>
+        <div class="personal__logo">
+          <b>Tomas Corrales</b>
+        </div>
+        <ul>
+          <div class="nav__link-list">
+            <li class="nav__link" >
+              <a
+                href="#projects"
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                >Projects</a
+              >
+            </li>
+            <li class="nav__link" onclick="toggleModal()">
+              <a
+                href="#"
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                >Contact</a
+              >
+            </li>
+            <li class="click nav__link">
+              <a href="#"
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                ><i class="fas fa-adjust" onclick="toggleContrast()"></i
+              ></a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+
+      <header class="header">
+        <div class="header_content">
+          <h1 class="title">Hey</h1>
+          <h1 class="title salmon">I'm Tomas.</h1>
+          <p class="header__para">
+            I'm a <b class="salmon">Frontend software engingeer</b> with a
+            passion of overcoming problems and bettering myself and my skills
+            everyday with an ambition of achieving greater things. <br />
+            Here's a bit more <b class="salmon click" onclick="toggleModal()">about me.</b>
+          </p>
+          <div class="social__list">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/tomas-corrales-a890b4229/"
+              class="social__link click"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/TomasxQ"
+              class="social__link click"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a target="_blank" download href="" class="social__link click">
+              <i class="fas fa-file-pdf"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+      <a href="#">
+
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fas fa-envelope"></i>
+        </button>
+      </a>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about"> 
+          <h3 class="modal__title modal__title--about">Here's a bit more about me.</h3>
+          <h4 class="modal__sub-title modal__sub-title--about">Front End Developer</h4>
+          <p class="modal__para">
+            Lorem ipsum dolor sit amet <b class="salmon">consectetur</b> adipisicing elit. Quasi <b class="salmon">laboriosam</b> nemo repellendus hic culpa impedit dignissimos, quibusdam veniam vel <b class="salmon">maiores</b>!
+            <br>
+            Lorem, <b class="salmon">ipsum dolor</b> sit amet consectetur adipisicing elit. Molestiae corrupti a quam <b class="salmon">deleniti rem</b> temporibus inventore magnam eligendi <b class="salmon">quae enim</b> tempora ipsum <b class="salmon">voluptatibus laboriosam</b> ad eveniet earum, voluptatum sint dolores!
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img class="modal__language--image" src="./media/media/icon_html.png" alt="">
+              <span class="language__name"> HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--image" src="./media/media/icon_css.png" alt="">
+              <span class="language__name"> CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--image" src="./media/media/icon_js.png" alt="">
+              <span class="language__name"> JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--image" src="./media/media/icon_react.png" alt="">
+              <span class="language__name"> React</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+           
+          <button class="modal__exit click" onclick="toggleModal()">
+            <i class="fas fa-times"></i>
+          </button>
+
+          <h3 class="modal__title modal__title--contact">
+            Let's have a chat !
+          </h3>
+          <h3 class="modal__sub-title modal__sub-title--contact">
+            I'm currently open to new opportunities.
+          </h3>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" type="text" name="user_name">
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" type="email" name="user_email">
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" type="text" name="message"> </textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message ! Looking forward to speaking to you soon.
+          </div>
+        </div>  
+      </div>
+
+      <img src="./media/assets/semi circle.svg" class="shape shape--0">
+      <img src="./media/assets/circle.svg" class="shape shape--1">
+      <img src="./media/assets/squiggly.svg" class="shape shape--2">
+      <img src="./media/assets/circle.svg" class="shape shape--3">
+      <img src="./media/assets/triangle.svg" class="shape shape--4">
+      <img src="./media/assets/circle.svg" class="shape shape--5">
+      <img src="./media/assets/squiggly.svg" class="shape shape--6">
+      <img src="./media/assets/circle.svg" class="shape shape--7">
+      <img src="./media/assets/semi circle.svg" class="shape shape--8">
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of <b class="salmon">projects</b>
+          </h1>
+          
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="./media/assets/blinker mockup.png" class="project__img" alt="">
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Dummy website
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    Html, Css, JavaScript, Tailwind, React
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis obcaecati sequi deleniti, eveniet eaque asperiores ipsum iusto, beatae maxime quia enim? Quam expedita dolorum tempora tenetur optio saepe blanditiis maiores.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="https://github.com/TomasxQ" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tomas-corrales-a890b4229/" class="project__description--link">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                  
+                </div>
+              </div>  
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="./media/assets/blinker mockup.png" class="project__img" alt="">
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Dummy website
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    Html, Css, JavaScript, Tailwind, React
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis obcaecati sequi deleniti, eveniet eaque asperiores ipsum iusto, beatae maxime quia enim? Quam expedita dolorum tempora tenetur optio saepe blanditiis maiores.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="https://github.com/TomasxQ" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tomas-corrales-a890b4229/" class="project__description--link">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                  
+                </div>
+              </div>  
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="./media/assets/blinker mockup.png" class="project__img" alt="">
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Dummy website
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    Html, Css, JavaScript, Tailwind, React
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis obcaecati sequi deleniti, eveniet eaque asperiores ipsum iusto, beatae maxime quia enim? Quam expedita dolorum tempora tenetur optio saepe blanditiis maiores.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="https://github.com/TomasxQ" class="project__description--link">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tomas-corrales-a890b4229/" class="project__description--link">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                  
+                </div>
+              </div>  
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          
+          
+
+          <a href="#" class="footer__anchor">
+            <figure>
+              <img src="./media/media/chrollo.jpg" class="footer__logo" alt="">
+            </figure>
+            <span class="footer__logo--popper">
+                Top
+                <i class="fas fa-arrow-up"></i>
+            </span>
+          </a>
+
+          <div class="footer__social--list">
+            <a href="https://github.com/TomasxQ" target="_blank" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white
+            "> Github </a>
+          <a href="https://www.linkedin.com/in/tomas-corrales-a890b4229/" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+          "> LinkedIn </a>
+          <a href="#" onclick="toggleModal()"  class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+          "> Contact </a>
+          <a href="" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+          "> Resume </a>
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2022 Tomas Corrales</div>
+      </div>
+      </div>
+    </footer>
+    
+  </body>
+  </html>
+  
