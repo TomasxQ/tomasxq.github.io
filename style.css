@@ -669,6 +669,7 @@ Shapes
 
 .shape{
     position: absolute;
+    
 }
 
 .shape--0{
@@ -729,12 +730,24 @@ Shapes
     transform: none;
     height: auto;
     width: 100%;
-    flex-direction: column-reverse;
+    flex-direction: column;
     border-radius: 0;
    }
    .modal__half{
     width: 100%;
    }
+   .modal__contact{
+    transform: translateY(110%);
+    }
+    .modal__about{ 
+        transform: translateY(-110%);
+    }
+    #modal_aboutmeparagraf{
+        display: none;
+    }
+    .modal__sub-title{
+        margin-bottom: 0px;
+    }
 }
 
 @media (max-width: 480px){
