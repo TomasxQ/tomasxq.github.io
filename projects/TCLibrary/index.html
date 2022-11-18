@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TC Library</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js"></script>
+</head>
+<body>
+    <section id="landing">
+
+        <nav>
+            <div class="nav__container">
+                <div class="logo"><img src="./assets/Library.svg"></div>
+                <ul class="nav__links">
+                    <li><a href="#" class="nav__link">Home</a></li>
+                    <li><a href="" class="nav__link no-cursor">Contact</a></li>
+                    <li><a href="#features" class="nav__link nav__link--primary">Books</a></li>
+                </ul>
+                <button class="btn__hamburguer btn__menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list">
+                            <a onclick="closeMenu()" class="menu__link" href="#">Home</a>
+                        </li> 
+                        <li class="menu__list">
+                            <a onclick="closeMenu()" class="menu__link" href="#features">Books</a>
+                        </li> 
+                        <li class="menu__list">
+                            <a onclick="closeMenu()" class="menu__link no-cursor">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header>
+            <div class="header__container">
+                <div class="header__description">
+                    <h1> Spain's best rated online libray platform </h1>
+                    <h2>Find your dream book with <b class="purple">TC Library </b></h2>
+                    <a href="#features"><button class="btn">Browse Books</button></a>
+                </div>
+                <figure class="header__image--wrapper">
+                    <img src="./assets/undraw_reading_time_re_phf7.svg" alt="">
+                </figure>
+            </div>
+        </header>
+        
+    </section>
+
+    <main>
+        <section id="highlights">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section__title">Why choose <b class="purple">TCLibrary</b></h2>
+                    <div class="highlight__wrapper">
+                        <div class="highlight">
+                            <div class="highlight__img">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                                <h3 class="highlight__subtitle">
+                                    Easy and Quick
+                                </h3>
+                                <p class="highlight__para">
+                                    Get access to the book you purchase instantly
+                                </p>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight__img">
+                                <i class="fas fa-book-open "></i>
+                            </div>
+                                <h3 class="highlight__subtitle">
+                                    10,000+ Books
+                                </h3>
+                                <p class="highlight__para">
+                                    TCLibrary has books in all of your favourite categories.
+                                </p>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight__img">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                                <h3 class="highlight__subtitle">
+                                    Affordable
+                                </h3>
+                                <p class="highlight__para">
+                                     Get your hands on popular books for as little as $9,99.
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <div class="row">
+                    <div class="books_header">
+
+                        <h2 class="section__title">
+                            All <b class="purple">Books</b>
+                        </h2>
+                        <select name="" id="filter" onchange="filterBooks(event)">
+                            <option value="" disabled selected>Sort</option>
+                            <option value="HIGH_TO_LOW" >Price, High to Low</option>
+                            <option value="LOW_TO_HIGH" >Price, Low to High</option>
+                            <option value="RATING" >Rating</option>
+                        </select>
+                    </div>
+
+                    <div class="books">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="explore">
+            <div class="container">
+                <div class="row row__col">
+                    <h2>Explore more <b class="purple">Books</b></h2>
+                    <a href="#features"><button class="btn">Browse Books</button></a>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row row__col">
+                    <div class="footer__wrapper">
+
+                        <img class="footer__logo--img" src="./assets/LibraryFooter.svg">
+                        <div class="footer__links">
+                            <div><a class="footer__link" href="#landing">Home</a></div>
+                            <div><a class="footer__link no-cursor" href="">About</a></div>
+                            <div><a class="footer__link" href="#features">Books</a></div>
+                            <div><a class="footer__link no-cursor" href="">Contact</a></div>
+                        </div>
+                        <div class="footer__copyright">Copryright &copy; 2022 TCLibrary</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+</body>
+</html>
