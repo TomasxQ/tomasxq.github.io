@@ -752,7 +752,7 @@ Shapes
 
 @media (max-width: 480px){
     .personal__logo{
-        font-size: 26px;
+        width: 60px;
     }
     .title{
         font-size: 52px;
