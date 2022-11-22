@@ -1,5 +1,6 @@
 let contrastToggle = false
 const scaleFactor = 1/20;
+let logo = document.querySelector('.personal__logo')
 
 function moveBackground(event) {
     const shapes = document.querySelectorAll(".shape")
@@ -18,10 +19,12 @@ function moveBackground(event) {
 function toggleContrast() {
     contrastToggle = !contrastToggle
     if (contrastToggle) {
-        document.body.classList += " dark-theme"   
+        document.body.classList += " dark-theme"  
+        logo.src  = './assets/logodark.PNG'; 
     }
     else{
         document.body.classList.remove("dark-theme")
+        logo.src  = './assets/logo.PNG';
     }
 }
 
