@@ -23,8 +23,10 @@
   <body>
     <section id="landing-page" onmousemove="moveBackground(event)">
       <nav>
-        <div class="personal__logo">
-          <b>Tomas Corrales</b>
+        <div>
+          <figure>
+            <img class="personal__logo" src="./assets/logo.PNG" alt="">
+          </figure>
         </div>
         <ul>
           <div class="nav__link-list">
@@ -45,7 +47,7 @@
             <li class="click nav__link">
               <a href="#"
                 class="nav__link--anchor link__hover-effect link__hover-effect--black"
-                ><i class="fas fa-adjust" onclick="toggleContrast()"></i
+                ><i class="fas fa-adjust" onclick="toggleContrast(); changeImage();"></i
               ></a>
             </li>
           </div>
@@ -103,19 +105,19 @@
           </p>
           <div class="modal__languages">
             <figure class="modal__language">
-              <img class="modal__language--image" src="./media/media/icon_html.png" alt="">
+              <img class="modal__language--image" src="./assets/icon_html.png" alt="">
               <span class="language__name"> HTML</span>
             </figure>
             <figure class="modal__language">
-              <img class="modal__language--image" src="./media/media/icon_css.png" alt="">
+              <img class="modal__language--image" src="./assets/icon_css.png" alt="">
               <span class="language__name"> CSS</span>
             </figure>
             <figure class="modal__language">
-              <img class="modal__language--image" src="./media/media/icon_js.png" alt="">
+              <img class="modal__language--image" src="./assets/icon_js.png" alt="">
               <span class="language__name"> JavaScript</span>
             </figure>
             <figure class="modal__language">
-              <img class="modal__language--image" src="./media/media/icon_react.png" alt="">
+              <img class="modal__language--image" src="./assets/icon_react.png" alt="">
               <span class="language__name"> React</span>
             </figure>
           </div>
@@ -158,15 +160,15 @@
         </div>  
       </div>
 
-      <img src="./media/assets/semi circle.svg" class="shape shape--0">
-      <img src="./media/assets/circle.svg" class="shape shape--1">
-      <img src="./media/assets/squiggly.svg" class="shape shape--2">
-      <img src="./media/assets/circle.svg" class="shape shape--3">
-      <img src="./media/assets/triangle.svg" class="shape shape--4">
-      <img src="./media/assets/circle.svg" class="shape shape--5">
-      <img src="./media/assets/squiggly.svg" class="shape shape--6">
-      <img src="./media/assets/circle.svg" class="shape shape--7">
-      <img src="./media/assets/semi circle.svg" class="shape shape--8">
+      <img src="./assets/semi circle.svg" class="shape shape--0">
+      <img src="./assets/circle.svg" class="shape shape--1">
+      <img src="./assets/squiggly.svg" class="shape shape--2">
+      <img src="./assets/circle.svg" class="shape shape--3">
+      <img src="./assets/triangle.svg" class="shape shape--4">
+      <img src="./assets/circle.svg" class="shape shape--5">
+      <img src="./assets/squiggly.svg" class="shape shape--6">
+      <img src="./assets/circle.svg" class="shape shape--7">
+      <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
 
     <section id="projects">
@@ -179,7 +181,7 @@
           <ul class="project__list">
             <li class="project">
               <div class="project__wrapper">
-                <img src="./media/media/TCLibrary home.png" class="project__img" alt="">
+                <img src="./assets/TCLibrary home.png" class="project__img" alt="">
                 <div class="project__wrapper--bg"></div>
                 <div class="project__description">
                   <h3 class="project__description--title">
@@ -208,7 +210,7 @@
             </li>
             <li class="project">
               <div class="project__wrapper">
-                <img src="./media/assets/blinker mockup.png" class="project__img" alt="">
+                <img src="./assets/blinker mockup.png" class="project__img" alt="">
                 <div class="project__wrapper--bg"></div>
                 <div class="project__description">
                   <h3 class="project__description--title">
@@ -234,7 +236,7 @@
             </li>
             <li class="project">
               <div class="project__wrapper">
-                <img src="./media/assets/blinker mockup.png" class="project__img" alt="">
+                <img src="./assets/blinker mockup.png" class="project__img" alt="">
                 <div class="project__wrapper--bg"></div>
                 <div class="project__description">
                   <h3 class="project__description--title">
@@ -263,6 +265,7 @@
         </div>
       </div>
     </section>
+
     <footer>
       <div class="container">
         <div class="row footer__row">
@@ -271,7 +274,7 @@
 
           <a href="#" class="footer__anchor">
             <figure>
-              <img src="./media/media/chrollo.jpg" class="footer__logo" alt="">
+              <img src="./assets/chrollo.jpg" class="footer__logo" alt="">
             </figure>
             <span class="footer__logo--popper">
                 Top
